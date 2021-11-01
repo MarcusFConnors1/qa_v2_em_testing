@@ -1,0 +1,14 @@
+Okididilly, I think that the "Searching Narrows the list" test has a weird part being .toBeGreaterThanOrEqual, as that I think
+could create false positives. As far as I can think about this it seems that there is no reason for the OrEqual part to be 
+included in that assertion. I don't know, maybe I'm crazy but it just seems like it does not offer anything more than another
+variable that could go wrong. 
+I would also think that it would be a good idea to search for more than one item, as you would most likely do that anyways
+with manual testing.
+It seems like it could miss potential bugs as well as it does not look at what is being searched, meaning that the search
+could be completely broken but if the list is shorter than the original it would still pass.
+I think that I would alter the test to include some way to make sure of what is being search, making sure that all results include what is being searched 
+for. I would also add more than one thing that is being searched for, as that is what I would do if I were to test it manually.
+Regarding the "Can add and delete an employee" test, I would also add more than one test. I think that that test is pretty 
+solid otherwise, to me it seems to to what it is supposed to do.
+
+** I implemented the changes mentioned above into the code on emv2.test.ts
